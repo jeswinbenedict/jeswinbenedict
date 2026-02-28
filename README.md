@@ -10,7 +10,8 @@
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
 
 ## 📊 GitHub Stats
-![Jeswin's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeswinbenedict&show_icons=true&theme=dark)
+![Jeswin's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeswinbenedict&show_icons=true&theme=dark&count_private=true&hide_border=true)
+
 
 ## 🔗 Connect
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeswin-karunya-benedict)
