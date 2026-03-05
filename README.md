@@ -29,17 +29,7 @@ A developer tool that scans Flutter codebases, surfaces breaking changes, and ge
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jeswinbenedict&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=888888&icon_color=ffffff&cache_seconds=1800" 
-       alt="Jeswin's GitHub Stats" 
-       onerror="this.style.display='none'" />
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeswinbenedict&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=888888&cache_seconds=1800" 
-       alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=jeswinbenedict&theme=dark&hide_border=true&background=0d1117&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=888888&dates=888888&currStreakNum=ffffff&sideNums=ffffff" 
-       alt="GitHub Streak" />
+  <img src="./assets/github-stats.svg" alt="Jeswin's GitHub Stats" width="480"/>
 </p>
 
 ---
