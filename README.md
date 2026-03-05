@@ -1,13 +1,36 @@
-# Hi, I'm Jeswin 👋
+# Jeswin Karunya Benedict
 
-🎓 Flutter Developer from Tamil Nadu, India  
-🚀 Currently building **NOVA** - a Flutter Migration Analyzer  
-🔥 Learning Firebase, Dart & Mobile App Development  
+Full-Stack Developer — Tamil Nadu, India
 
-## 🛠️ Tech Stack
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
+---
 
-## 🔗 Connect
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeswin-karunya-benedict)
+Building software across the full stack: from systems-level C++ to cross-platform mobile applications.
+Currently engineering **NOVA**, a Flutter Migration Analyzer that automates codebase evaluation and upgrade pathfinding for Flutter projects at scale.
+
+---
+
+## Technology
+
+| Language / Framework | Domain |
+|---|---|
+| Python | Scripting, Automation |
+| Java | Object-Oriented Systems, Android |
+| C++ | Systems Programming |
+| Dart | Mobile & Cross-Platform |
+| Flutter | UI Framework |
+| Firebase | Backend, Cloud Infrastructure |
+
+---
+
+## Current Work
+
+**NOVA — Flutter Migration Analyzer**
+A developer tool that scans Flutter codebases, surfaces breaking changes, and generates structured migration guidance across version upgrades.
+
+`Flutter` `Dart` `Static Analysis` `CLI Tooling`
+
+---
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/jeswin-karunya-benedict)
