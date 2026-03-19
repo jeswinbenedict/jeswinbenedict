@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Generate snake svg
-        uses: Platane/snk/svg-only@v3
+    steps:
+      - name: Generate Snake
+        uses: Platane/snk@v3
         with:
           github_user_name: jeswinbenedict
           outputs: |
@@ -23,10 +22,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Deploy to output branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          target_branch: output
-          build_dir: dist
+          branch: output
+          folder: dist
+          clean: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
