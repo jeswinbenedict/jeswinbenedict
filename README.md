@@ -12,18 +12,6 @@ Full-Stack Developer — Tamil Nadu, India
 
 Building software across the full stack: from systems-level C++ to cross-platform mobile applications.
 
-Currently engineering **NOVA**, a Flutter Migration Analyzer that automates codebase evaluation and upgrade pathfinding for Flutter projects at scale.
-
----
-
-## Current Work
-
-**NOVA — Flutter Migration Analyzer**
-
-A developer tool that scans Flutter codebases, surfaces breaking changes, and generates structured migration guidance across version upgrades.
-
-`Flutter` `Dart` `Static Analysis` `CLI Tooling`
-
 ---
 
 ## GitHub Stats
