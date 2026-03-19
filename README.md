@@ -5,14 +5,14 @@
 
 ---
 
-##  CONNECT
+## 🌐 Connect
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jeswin-karunya-benedict)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jechu_ben)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jeswinbenedict7@gmail.com)
 
 ---
 
-##  TECH STACK
+## 💻 Tech Stack
 
 **Languages**
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
@@ -57,7 +57,7 @@
 
 ---
 
-## GITHUB STATS
+## 📊 GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=jeswinbenedict&theme=ambient_gradient&hide_border=false&include_all_commits=false&count_private=false" /><br/>
@@ -67,8 +67,7 @@
 
 ---
 
-
-###  DEV QUOTE
+### ✍️ Dev Quote
 
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
@@ -76,12 +75,12 @@
 
 ---
 
-### CONTRIBUTION SNAKE
+### 🕹️ Pacman Contribution Graph
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/github-contribution-grid-snake.svg" />
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/pacman-contribution-graph.svg">
 </picture>
 
 ---
