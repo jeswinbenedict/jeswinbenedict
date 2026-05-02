@@ -1,81 +1,79 @@
-# Jeswin Karunya Benedict
-### Full-Stack Developer — Chennai, Tamil Nadu, India
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=52&duration=2500&pause=1000&color=C3073F&center=true&vCenter=true&width=820&height=100&lines=JESWIN+BENEDICT;Full-Stack+Developer;Mobile+%7C+Web+%7C+Systems" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&pause=1500&color=950740&center=true&vCenter=true&width=600&lines=fullstack+dev+%C2%B7+mobile+engineer+%C2%B7+systems+builder;Flutter+%7C+React+%7C+Spring+%7C+Node.js;C%2B%2B+to+Cloud+%E2%86%92+i+do+it+all;open+to+work+%E2%86%92+let%27s+build+something+real" />
+</div>
 
-> Building applications to solve real-world problems — from systems-level C++ to cross-platform mobile.
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
----
+```json
+{
+  "name"     : "Jeswin Karunya Benedict",
+  "based_in" : "Chennai, Tamil Nadu 🇮🇳",
+  "role"     : "Full-Stack Developer",
+  "building" : "Cross-platform apps · Systems-level solutions · Real-world problem solvers",
+  "stack"    : ["Flutter", "React", "Spring Boot", "Node.js", "C++", "Firebase"],
+  "into"     : ["mobile engineering", "fullstack apps", "IoT + embedded systems"],
+  "open_to"  : "internships · collabs · cool ideas 🤝"
+}
+```
 
-## 🌐 Connect
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jeswin-karunya-benedict)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jechu_ben)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jeswinbenedict7@gmail.com)
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
----
+## `~/tech-stack`
 
-## 💻 Tech Stack
+<div align="center">
 
 **Languages**
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=c,cpp,java,kotlin,python,dart,js,ts,html,css&theme=dark&perline=10" />
+
+<br/><br/>
 
 **Frameworks & Libraries**
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-**Cloud & Databases**
-![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+<img src="https://skillicons.dev/icons?i=flutter,react,nodejs,spring,flask,bootstrap&theme=dark&perline=10" />
 
-**Data & Design**
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
+<br/><br/>
 
-**Tools**
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
+**Cloud · Databases · Tools**
 
----
+<img src="https://skillicons.dev/icons?i=firebase,gcp,mongodb,mysql,git,github,figma,linux,raspberrypi,docker&theme=dark&perline=10" />
 
-## 📊 GitHub Stats
+</div>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jeswinbenedict&theme=ambient_gradient&hide_border=false&include_all_commits=false&count_private=false" /><br/>
-  <img src="https://nirzak-streak-stats.vercel.app/?user=jeswinbenedict&theme=ambient_gradient&hide_border=false" /><br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeswinbenedict&theme=ambient_gradient&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
-</p>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
----
+## `~/about`
 
-### ✍️ Dev Quote
+```bash
+┌──(jeswinbenedict㉿fullstack)-[~]
+└─$ cat about.txt
 
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p>
+  Full-Stack Dev by day · Systems builder by night
+  From systems-level C++ to cross-platform Flutter apps
+  I write code that solves real problems · and sometimes invents new ones
+  Raspberry Pi tinkerer · IoT enthusiast · Database whisperer
 
----
+└─$ _
+```
 
-### 🕹️ Pacman Contribution Graph
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+## `~/stats`
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=jeswinbenedict&theme=dark&hide_border=true&background=00000000&ring=C3073F&fire=950740&currStreakLabel=C3073F&sideLabels=888888&dates=555555&currStreakNum=ffffff&sideNums=ffffff" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jeswinbenedict&bg_color=00000000&color=950740&line=C3073F&point=ffffff&hide_border=true&area=true&area_color=6F2232&custom_title=contribution+activity" width="96%" />
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+## `~/pacman`
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/pacman-contribution-graph-dark.svg">
@@ -83,6 +81,30 @@
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/output/pacman-contribution-graph.svg">
 </picture>
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-[![](https://visitcount.itsvg.in/api?id=jeswinbenedict&icon=0&color=0)](https://visitcount.itsvg.in)
+## `~/connect`
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/-linkedin-1A1A1D?style=for-the-badge&logo=linkedin&logoColor=C3073F)](https://linkedin.com/in/jeswin-karunya-benedict)
+[![Instagram](https://img.shields.io/badge/-instagram-1A1A1D?style=for-the-badge&logo=instagram&logoColor=950740)](https://instagram.com/jechu_ben)
+[![Email](https://img.shields.io/badge/-email-1A1A1D?style=for-the-badge&logo=gmail&logoColor=C3073F)](mailto:jeswinbenedict7@gmail.com)
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+## `~/quote`
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=jeswinbenedict&label=visitors&color=C3073F&style=flat-square" />
+  <br/><br/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A1A1D,30:6F2232,70:950740,100:C3073F&height=100&section=footer" />
+</div>
