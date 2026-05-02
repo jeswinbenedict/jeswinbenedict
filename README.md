@@ -103,6 +103,26 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
+## `~/license`
+
+<div align="center">
+
+[![CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-C3073F?style=for-the-badge&labelColor=1A1A1D&logo=creativecommons&logoColor=C3073F)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+**© 2025 Jeswin Karunya Benedict. All Rights Reserved.**
+
+This README and its design are licensed under the
+[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+> ❌ You may **not** copy, reproduce, or redistribute this work. <br/>
+> ❌ You may **not** modify or build upon this work. <br/>
+> ❌ You may **not** use this for commercial purposes. <br/>
+> ✅ You **must** give credit if you reference or link to this profile.
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=jeswinbenedict&label=visitors&color=C3073F&style=flat-square" />
   <br/><br/>
