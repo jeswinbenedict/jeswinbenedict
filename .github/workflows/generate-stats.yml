@@ -1,36 +1,31 @@
 name: Generate GitHub Stats SVG
-
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install requests
-
       - name: Generate Stats SVG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: jeswinbenedict
         run: python scripts/generate_stats.py
-
       - name: Commit and push SVG
         run: |
           git config --global user.name "github-actions[bot]"
