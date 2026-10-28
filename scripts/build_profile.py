@@ -179,7 +179,7 @@ def info_lines(s):
         "",
         header("- Contact"),
         kv(["Email"], "jeswinbenedict7@gmail.com"),
-        kv(["Portfolio"], "jeswinbenedict.github.io/Portfolio"),
+        kv(["Portfolio"], "jeswinkarunyabenedict.vercel.app"),
         kv(["LinkedIn"], "in/jeswin-karunya-benedict"),
         kv(["Instagram"], "@jechu_ben"),
         "",
