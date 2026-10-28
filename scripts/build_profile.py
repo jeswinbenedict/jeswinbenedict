@@ -64,41 +64,56 @@ def graphql(query, variables):
 
 
 def fetch_stats():
+    """Public numbers, matching what github.com/USERNAME shows to visitors."""
     data = graphql("""
     query($login: String!) {
       user(login: $login) {
         createdAt
         followers { totalCount }
-        repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
+        repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
           totalCount
           nodes { stargazerCount }
         }
-        repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, REPOSITORY]) { totalCount }
-        contributionsCollection { contributionYears }
+        contributionsCollection {
+          contributionYears
+          totalRepositoriesWithContributedCommits
+        }
       }
     }""", {"login": USERNAME})["user"]
 
-    commits = 0
+    # Sum every year so the totals are all-time, not just the last 12 months.
+    # The calendar total includes private contributions (shown on the profile
+    # as a count only); commits and PRs are public ones.
+    contributions = commits = prs = 0
     for year in data["contributionsCollection"]["contributionYears"]:
-        start = f"{year}-01-01T00:00:00Z"
-        end = f"{year}-12-31T23:59:59Z"
-        commits += graphql("""
+        year_data = graphql("""
         query($login: String!, $from: DateTime!, $to: DateTime!) {
           user(login: $login) {
             contributionsCollection(from: $from, to: $to) {
+              contributionCalendar { totalContributions }
               totalCommitContributions
+              totalPullRequestContributions
             }
           }
-        }""", {"login": USERNAME, "from": start, "to": end})["user"]["contributionsCollection"]["totalCommitContributions"]
+        }""", {"login": USERNAME, "from": f"{year}-01-01T00:00:00Z",
+               "to": f"{year}-12-31T23:59:59Z"})["user"]["contributionsCollection"]
+        contributions += year_data["contributionCalendar"]["totalContributions"]
+        commits += year_data["totalCommitContributions"]
+        prs += year_data["totalPullRequestContributions"]
 
-    return {
+    stats = {
         "created": datetime.fromisoformat(data["createdAt"].replace("Z", "+00:00")),
         "repos": data["repositories"]["totalCount"],
-        "contributed": data["repositoriesContributedTo"]["totalCount"],
         "stars": sum(r["stargazerCount"] for r in data["repositories"]["nodes"]),
-        "commits": commits,
         "followers": data["followers"]["totalCount"],
+        "contributions": contributions,
+        "commits": commits,
+        "prs": prs,
+        # Same figure as the profile's "Contributed to ... repositories" (last 12 months).
+        "contributed": data["contributionsCollection"]["totalRepositoriesWithContributedCommits"],
     }
+    print({k: v for k, v in stats.items() if k != "created"})
+    return stats
 
 
 def uptime(since):
@@ -152,15 +167,17 @@ def info_lines(s):
         kv(["Instagram"], "@jechu_ben"),
         "",
         header("- GitHub Stats"),
-        stats_line(("Repos", s["repos"]), ("Contributed", s["contributed"]), ("Stars", s["stars"])),
-        stats_line(("Commits", s["commits"]), ("Followers", s["followers"])),
+        stats_line(("Repos", s["repos"]), ("Stars", s["stars"]), ("Followers", s["followers"])),
+        stats_line(("Contributions", s["contributions"]), ("Commits", s["commits"]), ("PRs", s["prs"])),
+        stats_line(("Contributed to", f'{s["contributed"]} repos in the last year')),
     ]
 
 
 def stats_line(*pairs):
     cells = []
     for key, value in pairs:
-        cells.append(f'<tspan class="key">{key}</tspan>: <tspan class="value">{value:,}</tspan>')
+        text = f"{value:,}" if isinstance(value, int) else escape(value)
+        cells.append(f'<tspan class="key">{key}</tspan>: <tspan class="value">{text}</tspan>')
     return '<tspan class="cc">. </tspan>' + '<tspan class="cc"> | </tspan>'.join(cells)
 
 
