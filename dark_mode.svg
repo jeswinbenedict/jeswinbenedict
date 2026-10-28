@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1000px" height="545px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key {fill: #ff7b72;}
+.value {fill: #a5d6ff;}
+.cc {fill: #616e7f;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="1000px" height="545px" fill="#161b22" rx="15"/>
+<text x="15" y="22" fill="#c9d1d9" font-size="10px">
+<tspan x="15" y="22"></tspan>
+<tspan x="15" y="34">                     :..</tspan>
+<tspan x="15" y="46">                   .!kmkllili!|!|lli;</tspan>
+<tspan x="15" y="58">                !lH%%%@%@@@@@@%@HlkkHli</tspan>
+<tspan x="15" y="70">              j%@@%MHHMMMMHHMMHHMHmm%%@m</tspan>
+<tspan x="15" y="82">            ;H@@MHmHHHHHmmHHHHMMMMMMMH@%,</tspan>
+<tspan x="15" y="94">           k@@%HMM%MMMM%MMMHHHHM@%%MM%@@|</tspan>
+<tspan x="15" y="106">          j@@%H%MMMMMHH%%M%MMHHMM%%M%%%@@i:</tspan>
+<tspan x="15" y="118">         .%@%%MHHMMMHHHM%%%%MM@@MH%@MMMM@%|.</tspan>
+<tspan x="15" y="130">         .%@@@MHMMMMMMMMHHM%%MMHmllmMMHM@@l</tspan>
+<tspan x="15" y="142">         .%@@%MHMMMMM@%MHHHmmljlljljmMmH%@;</tspan>
+<tspan x="15" y="154">          %@@@MMMMMMMHmkkkklllkmmmmmlH%H%@i</tspan>
+<tspan x="15" y="166">          !%@@%HHMMHHmkkkkklHMMMHHmkljk@%@@,</tspan>
+<tspan x="15" y="178">           j@@@lmHHHMMMHmmmmmmMHHHHHklim@M@|</tspan>
+<tspan x="15" y="190">           ,M@%jkHMHMMMMMHlkHMMHHHmllllj@%@:</tspan>
+<tspan x="15" y="202">            i@@lkHHmmmmmMm|:lkkkkkj|jlljMM@,</tspan>
+<tspan x="15" y="214">             m@mkkllllkmmll!|iimmlllllll%@%</tspan>
+<tspan x="15" y="226">              M%mkkllkmkkHkkHHllHHkkkkmMHk</tspan>
+<tspan x="15" y="238">              ,@@HmkkmkkHMMHHmjilmMmkmM@;</tspan>
+<tspan x="15" y="250">                k@MkHmHHjii!!||jM%Hkkm@M</tspan>
+<tspan x="15" y="262">                 l@@HkHMkljjjllkkkkkmM@;</tspan>
+<tspan x="15" y="274">                   H@@Hkkmmmmmkllkklk%H</tspan>
+<tspan x="15" y="286">                    :j%Mmkkkkkllllllm%@.</tspan>
+<tspan x="15" y="298">                     :m@mkkklllkkkkkkmMlj</tspan>
+<tspan x="15" y="310">                  :!M@MMHmmmmmmmmkkkkkkH%</tspan>
+<tspan x="15" y="322">              ;ilmjM%M%kmmmmHHmmkmkkkkmH@i  .</tspan>
+<tspan x="15" y="334">        ;|jlkkmkkj,!%@MkmmmmmkkkkkkkkH%H; ...</tspan>
+<tspan x="15" y="346">    !ilkkklljjijii! i@@HmmmkkkkkkkmM%H|..,....    .</tspan>
+<tspan x="15" y="358">   kkjjiiiijjjijjji!.;m@%MHHmmHHM%Mk!.,;:....    .....</tspan>
+<tspan x="15" y="370">   ji||iiijjjjjiiii||;,;ikHMMMHkj!,,;|;,...,,...   .....</tspan>
+<tspan x="15" y="382">  jjiiiiiiiiiiijjiji||i|;:::::,.,;ij!:,,:::;;,,.......,..</tspan>
+<tspan x="15" y="394">  !iiii|||||||||ijjjjiiiiiii||ijji!,,:;;;;;;:,:,::,,,::,,....</tspan>
+<tspan x="15" y="406">  ;|iii|i|||||!!|ijjiiiiii|||||;,.:!|i|!!:::,:::::;;:,:||;;, .</tspan>
+<tspan x="15" y="418">  ,!!|ii|||||!!!!|iiiiiiiiii|!!!|ijjii!;!::::::::;!,::|jj||: !</tspan>
+<tspan x="15" y="430">  ,:!!iiiii|!!!!;!iiiiiiiiiiiijjiii|i|;:;;;;:,;;;:,.::|ii|i,;|</tspan>
+<tspan x="15" y="442">  ,,;!||iii|;!!!;!||iiiiiiii|ii|ii||!:;;:;;::;|!::,,::|||||,||</tspan>
+<tspan x="15" y="454">  :,,;!|iii|!!;!;!|!!|||i|iiiiii|!|!;:;;:;;;;;;:.:,,,;!|i|;,|!</tspan>
+<tspan x="15" y="466">  ;.,,;!iii|||!;;;|!!||!||||||||!;!!;;;::::!;,..,:,,,;!||!:,i;</tspan>
+<tspan x="15" y="478">  |,,,:!||||!!!!:;||;,,,:;;;;;;;;;;;:;;:::;:. .,;;,,,:!|!;:.i!</tspan>
+<tspan x="15" y="490">  i,,,,:;!|!!!!!;;!;,,::::;;;:;!;;;;:;:::;:.    ,:. ,:!|!!,,j|</tspan>
+<tspan x="15" y="502">  i;,,,::;!|!;!;;!;.,:,::::;;;;;;::;;:;:::,. ,i!. .:. ;!;!,;j:</tspan>
+<tspan x="15" y="514">  !|,,,,::;!|!;;::::,,,,.,::;:;:::,:;::,,;:.,@Hkj;@@%,.;!!.;;:</tspan>
+<tspan x="15" y="526">  ;|,,,,::;:;!;;:,.,,,,,...,,,::::,,:,,,,::..Hm|!!iM%. :!;.!|:</tspan>
+</text>
+<text x="410" y="30" fill="#c9d1d9">
+<tspan x="410" y="30">jeswin@benedict <tspan class="cc">———————————————————————————————————————————</tspan></tspan>
+<tspan x="410" y="50"><tspan class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">Windows 11, Android, Linux</tspan></tspan>
+<tspan x="410" y="70"><tspan class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">10 months, 3 days on GitHub</tspan></tspan>
+<tspan x="410" y="90"><tspan class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">VIT-AP University</tspan></tspan>
+<tspan x="410" y="110"><tspan class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">B.Tech Computer Science Student</tspan></tspan>
+<tspan x="410" y="130"><tspan class="cc">. </tspan><tspan class="key">Role</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">Full-Stack &amp; Flutter Developer</tspan></tspan>
+<tspan x="410" y="150"><tspan class="cc">. </tspan><tspan class="key">Focus</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Safety-Tech, AI, IoT</tspan></tspan>
+<tspan x="410" y="170"><tspan class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Tamil Nadu, India</tspan></tspan>
+<tspan x="410" y="210"><tspan class="cc">. </tspan><tspan class="key">Languages</tspan><tspan class="cc">.</tspan><tspan class="key">Code</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Dart, TypeScript, Python, Java, C++</tspan></tspan>
+<tspan x="410" y="230"><tspan class="cc">. </tspan><tspan class="key">Languages</tspan><tspan class="cc">.</tspan><tspan class="key">Computer</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">HTML, CSS, SQL, LaTeX, YAML</tspan></tspan>
+<tspan x="410" y="250"><tspan class="cc">. </tspan><tspan class="key">Frameworks</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Flutter, React, Spring Boot, Node.js</tspan></tspan>
+<tspan x="410" y="270"><tspan class="cc">. </tspan><tspan class="key">Cloud</tspan><tspan class="cc">.</tspan><tspan class="key">Tools</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Firebase, GCP, MongoDB, Docker, Git</tspan></tspan>
+<tspan x="410" y="290"><tspan class="cc">. </tspan><tspan class="key">Projects</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">LuzHire, NOVA, AERIX, Goel-AI</tspan></tspan>
+<tspan x="410" y="330">- Contact <tspan class="cc">—————————————————————————————————————————————————</tspan></tspan>
+<tspan x="410" y="350"><tspan class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">jeswinbenedict7@gmail.com</tspan></tspan>
+<tspan x="410" y="370"><tspan class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">jeswinbenedict.github.io/Portfolio</tspan></tspan>
+<tspan x="410" y="390"><tspan class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">in/jeswin-karunya-benedict</tspan></tspan>
+<tspan x="410" y="410"><tspan class="cc">. </tspan><tspan class="key">Instagram</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">@jechu_ben</tspan></tspan>
+<tspan x="410" y="450">- GitHub Stats <tspan class="cc">————————————————————————————————————————————</tspan></tspan>
+<tspan x="410" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan>: <tspan class="value">16</tspan><tspan class="cc"> | </tspan><tspan class="key">Contributed</tspan>: <tspan class="value">0</tspan><tspan class="cc"> | </tspan><tspan class="key">Stars</tspan>: <tspan class="value">5</tspan></tspan>
+<tspan x="410" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan>: <tspan class="value">401</tspan><tspan class="cc"> | </tspan><tspan class="key">Followers</tspan>: <tspan class="value">18</tspan></tspan>
+</text>
+</svg>
