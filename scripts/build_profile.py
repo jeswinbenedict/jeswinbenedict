@@ -1,5 +1,6 @@
-"""Builds dark_mode.svg and light_mode.svg: an ASCII portrait plus a
-neofetch-style info panel with live GitHub stats.
+"""Builds dark_mode.svg and light_mode.svg: a gold pixel-art portrait logo
+(in the style of the Hermes Agent wordmark) plus a neofetch-style info panel
+with live GitHub stats.
 
 Run locally:  GITHUB_TOKEN=... python scripts/build_profile.py
 """
@@ -17,27 +18,33 @@ TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 # ── Layout ───────────────────────────────────────────────────────────────────
 WIDTH, HEIGHT = 1000, 545
-ART_COLS, ART_ROWS = 64, 43          # portrait grid
-ART_CHAR_W, ART_LINE_H = 6.0, 12     # px per cell at 10px Consolas (109% size-adjust)
-ART_X, ART_Y = 15, 22
+LOGO_X, LOGO_Y = 12, 12
+LOGO_W, LOGO_H = 384, 516            # portrait area in px
+PIXEL = 6                            # px per logo pixel
+LOGO_COLS, LOGO_ROWS = LOGO_W // PIXEL, LOGO_H // PIXEL
+TONE_CUTS = (0.18, 0.43, 0.74)       # brightness thresholds -> tones 0..3
+TONE_SHADE = (0.2, 0.42, 0.72, 1.0)  # band colour multiplier per tone
+BAND_STARTS = (0.0, 0.58, 0.76)      # top/middle/bottom colour bands, as row fractions
+SHADOW_OFFSETS = (10, 6)             # offset outlines behind the logo, outer first
 INFO_X, INFO_Y, INFO_LINE_H = 410, 30, 20
 INFO_WIDTH = 59                      # chars per info line, for dot padding
-RAMP = " .,:;!|ijlkmHM%@"
 
 THEMES = {
-    "dark": {"bg": "#161b22", "text": "#c9d1d9", "key": "#ff7b72",
-             "value": "#a5d6ff", "cc": "#616e7f", "art": "#c9d1d9"},
-    "light": {"bg": "#f6f8fa", "text": "#24292f", "key": "#a4062f",
-              "value": "#0a3069", "cc": "#c2cfde", "art": "#24292f"},
+    "dark": {"bg": "#141414", "border": "#2a2416", "text": "#e6e6e6", "title": "#ffd700",
+             "key": "#ffb800", "value": "#e6edf3", "cc": "#5a5650",
+             "bands": ("#ffd700", "#ffb800", "#d68030"), "shadows": ("#96641a", "#dca028")},
+    "light": {"bg": "#fbf8f1", "border": "#e8dcc0", "text": "#2b2105", "title": "#a86400",
+              "key": "#a86400", "value": "#1f2328", "cc": "#c9bfa8",
+              "bands": ("#e0a800", "#d08a00", "#b5651d"), "shadows": ("#c99a4a", "#b07a20")},
 }
 
 
-# ── ASCII portrait ───────────────────────────────────────────────────────────
+# ── Pixel-art portrait ───────────────────────────────────────────────────────
 def portrait(path):
+    """Returns a LOGO_ROWS x LOGO_COLS grid of tones 0-3, or None for background."""
     im = Image.open(path).convert("RGB")
-    left, right, top = 110, 744, 250
-    height = int((right - left) / (ART_COLS * ART_CHAR_W) * ART_ROWS * ART_LINE_H)
-    im = im.crop((left, top, right, top + height))
+    left, right, top = 140, 714, 255
+    im = im.crop((left, top, right, top + int((right - left) * LOGO_H / LOGO_W)))
 
     # Flood-fill the flat backdrop from the edges to get a subject mask.
     small = im.resize((im.width // 4, im.height // 4)).filter(ImageFilter.GaussianBlur(1.5))
@@ -62,22 +69,61 @@ def portrait(path):
     mask.putdata([0 if seen[y][x] else 255 for y in range(h) for x in range(w)])
     mask = mask.filter(ImageFilter.MinFilter(9))  # trims the white sticker outline
 
-    gray = ImageOps.grayscale(im).filter(ImageFilter.UnsharpMask(radius=14, percent=260, threshold=0))
-    gray = ImageOps.equalize(gray, mask=mask.resize(gray.size))
-    gray = gray.resize((ART_COLS, ART_ROWS), Image.LANCZOS)
-    mask = mask.resize((ART_COLS, ART_ROWS), Image.LANCZOS)
+    # Tone the head and the sweater separately so the face keeps its contrast.
+    gray = ImageOps.grayscale(im).filter(ImageFilter.UnsharpMask(radius=10, percent=170, threshold=0))
+    split = int(gray.height * 0.70)
+    full = mask.resize(gray.size)
+    head, body = full.copy(), full.copy()
+    head.paste(0, (0, split, head.width, head.height))
+    body.paste(0, (0, 0, body.width, split))
+    toned = ImageOps.equalize(gray, mask=head)
+    toned.paste(ImageOps.autocontrast(gray, cutoff=1, mask=body).crop((0, split, gray.width, gray.height)), (0, split))
+    toned = toned.resize((LOGO_COLS, LOGO_ROWS), Image.BOX)
+    mask = mask.resize((LOGO_COLS, LOGO_ROWS), Image.BOX)
 
-    lines = []
-    for y in range(ART_ROWS):
-        row = ""
-        for x in range(ART_COLS):
-            if mask.getpixel((x, y)) < 128:
-                row += " "
-            else:
-                darkness = 1 - gray.getpixel((x, y)) / 255
-                row += RAMP[min(len(RAMP) - 1, int(darkness * len(RAMP)))]
-        lines.append(row.rstrip())
-    return lines
+    return [
+        [None if mask.getpixel((x, y)) < 128 else sum(toned.getpixel((x, y)) / 255 >= c for c in TONE_CUTS)
+         for x in range(LOGO_COLS)]
+        for y in range(LOGO_ROWS)
+    ]
+
+
+def shade(hex_color, factor):
+    r, g, b = (int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
+    return f"#{int(r * factor):02x}{int(g * factor):02x}{int(b * factor):02x}"
+
+
+def logo_svg(grid, c):
+    """Pixel runs coloured by band and tone, over offset silhouette outlines."""
+    edges = []
+    for y, row in enumerate(grid):
+        for x, tone in enumerate(row):
+            if tone is None:
+                continue
+            for dx, dy, seg in ((0, -1, "h"), (0, 1, "h"), (-1, 0, "v"), (1, 0, "v")):
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < LOGO_COLS and 0 <= ny < LOGO_ROWS) or grid[ny][nx] is None:
+                    edges.append(f"M{(x + (dx == 1)) * PIXEL} {(y + (dy == 1)) * PIXEL}{seg}{PIXEL}")
+    outline = "".join(edges)
+    parts = [
+        f'<path transform="translate({offset} {offset})" d="{outline}" stroke="{color}" stroke-width="1.2" fill="none"/>'
+        for offset, color in zip(SHADOW_OFFSETS, c["shadows"])
+    ]
+
+    for y, row in enumerate(grid):
+        band = c["bands"][sum(y / LOGO_ROWS >= start for start in BAND_STARTS) - 1]
+        x = 0
+        while x < LOGO_COLS:
+            tone = row[x]
+            run = 1
+            while x + run < LOGO_COLS and row[x + run] == tone:
+                run += 1
+            if tone is not None:
+                parts.append(f'<rect x="{x * PIXEL}" y="{y * PIXEL}" width="{run * PIXEL}" '
+                             f'height="{PIXEL}" fill="{shade(band, TONE_SHADE[tone])}"/>')
+            x += run
+    body = "\n".join(parts)
+    return f'<g transform="translate({LOGO_X} {LOGO_Y})" shape-rendering="crispEdges">\n{body}\n</g>'
 
 
 # ── GitHub stats ─────────────────────────────────────────────────────────────
@@ -157,7 +203,7 @@ def kv(keys, value):
 
 
 def header(title):
-    return f'{escape(title)} <tspan class="cc">{"—" * (INFO_WIDTH - len(title) - 1)}</tspan>'
+    return f'<tspan class="title">{escape(title)}</tspan> <tspan class="cc">{"—" * (INFO_WIDTH - len(title) - 1)}</tspan>'
 
 
 def info_lines(s):
@@ -171,7 +217,7 @@ def info_lines(s):
         kv(["Focus"], "Safety-Tech, AI, IoT"),
         kv(["Location"], "Tamil Nadu, India"),
         "",
-        kv(["Languages", "Code"],"Dart, TypeScript, Python, Java, C++"),
+        kv(["Languages", "Code"], "Dart, TypeScript, Python, Java, C++"),
         kv(["Languages", "Computer"], "HTML, CSS, SQL, LaTeX, YAML"),
         kv(["Frameworks"], "Flutter, React, Spring Boot, Node.js"),
         kv(["Cloud", "Tools"], "Firebase, GCP, MongoDB, Docker, Git"),
@@ -197,12 +243,8 @@ def stats_line(*pairs):
 
 
 # ── SVG ──────────────────────────────────────────────────────────────────────
-def render(theme, art, info):
+def render(theme, grid, info):
     c = THEMES[theme]
-    art_svg = "\n".join(
-        f'<tspan x="{ART_X}" y="{ART_Y + i * ART_LINE_H}">{escape(line)}</tspan>'
-        for i, line in enumerate(art)
-    )
     info_svg = "\n".join(
         f'<tspan x="{INFO_X}" y="{INFO_Y + i * INFO_LINE_H}">{line}</tspan>'
         for i, line in enumerate(info) if line
@@ -220,12 +262,11 @@ size-adjust: 109%;
 .key {{fill: {c['key']};}}
 .value {{fill: {c['value']};}}
 .cc {{fill: {c['cc']};}}
+.title {{fill: {c['title']}; font-weight: bold;}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="{WIDTH}px" height="{HEIGHT}px" fill="{c['bg']}" rx="15"/>
-<text x="{ART_X}" y="{ART_Y}" fill="{c['art']}" font-size="10px">
-{art_svg}
-</text>
+<rect x="0.5" y="0.5" width="{WIDTH - 1}px" height="{HEIGHT - 1}px" fill="{c['bg']}" stroke="{c['border']}" rx="15"/>
+{logo_svg(grid, c)}
 <text x="{INFO_X}" y="{INFO_Y}" fill="{c['text']}">
 {info_svg}
 </text>
@@ -234,11 +275,11 @@ text, tspan {{white-space: pre;}}
 
 
 def main():
-    art = portrait(os.path.join(ROOT, "assets", "profile.jpg"))
+    grid = portrait(os.path.join(ROOT, "assets", "profile.jpg"))
     info = info_lines(fetch_stats())
     for theme in THEMES:
         with open(os.path.join(ROOT, f"{theme}_mode.svg"), "w", encoding="utf-8") as f:
-            f.write(render(theme, art, info))
+            f.write(render(theme, grid, info))
     print("Built dark_mode.svg and light_mode.svg")
 
 
