@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dark_mode.svg light_mode.svg
+          git add dark_mode.svg light_mode.svg README.md
           git diff --cached --quiet || git commit -m "chore: update profile card [skip ci]"
           git push

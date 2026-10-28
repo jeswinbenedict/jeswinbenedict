@@ -4,8 +4,10 @@ with live GitHub stats.
 
 Run locally:  GITHUB_TOKEN=... python scripts/build_profile.py
 """
+import hashlib
 import json
 import os
+import re
 from datetime import datetime, timezone
 from html import escape
 
@@ -199,10 +201,21 @@ def main():
     with open(os.path.join(ROOT, "assets", "portrait.json"), encoding="utf-8") as f:
         portrait = json.load(f)
     info = info_lines(fetch_stats())
-    for theme in THEMES:
+    svgs = {theme: render(theme, portrait, info) for theme in THEMES}
+    for theme, svg in svgs.items():
         with open(os.path.join(ROOT, f"{theme}_mode.svg"), "w", encoding="utf-8") as f:
-            f.write(render(theme, portrait, info))
-    print("Built dark_mode.svg and light_mode.svg")
+            f.write(svg)
+
+    # Browsers and GitHub's image proxy cache the card by URL, so stamp the
+    # README's image links with a content hash to make every change a new URL.
+    version = hashlib.sha1("".join(svgs.values()).encode()).hexdigest()[:10]
+    readme = os.path.join(ROOT, "README.md")
+    with open(readme, encoding="utf-8") as f:
+        text = f.read()
+    text = re.sub(r"(/(?:dark|light)_mode\.svg)(\?v=\w+)?", rf"\1?v={version}", text)
+    with open(readme, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+    print(f"Built dark_mode.svg and light_mode.svg (v={version})")
 
 
 if __name__ == "__main__":
