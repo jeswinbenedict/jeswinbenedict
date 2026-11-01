@@ -1,7 +1,7 @@
 <a href="https://jeswinkarunyabenedict.vercel.app/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/main/dark_mode.svg?v=6c7b4bc69f">
-    <img alt="Jeswin Karunya Benedict's GitHub Profile README" src="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/main/light_mode.svg?v=6c7b4bc69f">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/main/dark_mode.svg?v=57c71fc59f">
+    <img alt="Jeswin Karunya Benedict's GitHub Profile README" src="https://raw.githubusercontent.com/jeswinbenedict/jeswinbenedict/main/light_mode.svg?v=57c71fc59f">
   </picture>
 </a>
 
